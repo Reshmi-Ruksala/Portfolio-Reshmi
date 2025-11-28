@@ -7,7 +7,7 @@
             <div class="logo-dot"></div>
             <div class="logo-line"></div>
           </div>
-          <span>Binada Pasandul</span>
+          <span>Reshmi Ruksala</span>
         </a>
       </div>
       <ul class="nav-menu" :class="{ active: isMenuOpen }">

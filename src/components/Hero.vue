@@ -19,8 +19,8 @@
 
         <!-- Animated name -->
         <h1 class="name">
-          <span class="name-line">Binada</span>
-          <span class="name-line last-name">Pasandul</span>
+          <span class="name-line">Reshmi</span>
+          <span class="name-line last-name">Ruksala</span>
         </h1>
 
         <!-- Animated title with typing effect -->

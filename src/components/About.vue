@@ -8,7 +8,7 @@
       <div class="about-content">
         <div class="about-text">
           <p>
-            I'm Binada Pasandul, an IT undergraduate at SLIIT and a dedicated full-stack developer with strong expertise in backend development, cloud computing, and scalable 
+            I'm Reshmi Ruksala, an IT undergraduate at SLIIT and a dedicated full-stack developer with strong expertise in backend development, cloud computing, and scalable 
             system architecture. Over the past few years, I’ve completed 6+ full-stack projects across MERN, Java JSP/Servlet, PHP-MySQL, and Android, gaining hands-on experience building secure APIs, 
             real-time applications, and production-ready platforms. 
             I’ve worked with international clients, including delivering a real-time trading project integrating React, C#, SignalR, and WebSockets using Agile and Jira.
