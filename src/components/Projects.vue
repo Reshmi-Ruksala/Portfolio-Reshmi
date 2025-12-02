@@ -94,18 +94,18 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Pulse',
-    description: 'A wellness tracking app with daily habit tracking, water intake monitoring and gym routine logging, used shared preferences for data storage',
+    title: 'BeWell+',
+    description: 'A A wellness tracking app with daily habit tracking, water intake monitoring, and mood logging. Built using Kotlin with SharedPreferences for smooth and persistent user data storage.',
     technologies: ['Kotlin', 'Shared preferences','Figma'],
-    github: 'https://github.com/BinadaPasandul/Pulse-Mobile-app',
+    github: 'https://github.com/Reshmi-Ruksala/BeWell-',
     image: '/images/pulse1.jpeg'
   },
   {
     id: 4,
-    title: 'Travella',
-    description: 'A mobile app for storing travel memories with journals, photos and custom entries, used data persisitence',
+    title: 'HomeFix',
+    description: 'A Mobile App Developer Developed a mobile app for browsing, booking, and managing home services with an intuitive UI and smooth user experience. ',
     technologies: ['Kotlin','Share preferences', 'Figma'],
-    github: 'https://github.com/BinadaPasandul/Travella',
+    github: 'https://github.com/Reshmi-Ruksala/HomeFix-MAD',
     image: '/images/travella1.jpeg'
   },
   {
@@ -121,7 +121,7 @@ const projects: Project[] = [
     title: 'Portfolio Website',
     description: 'A modern, responsive portfolio website showcasing projects, skills, and contact information with smooth animations.',
     technologies: ['Vue.js', 'TypeScript', 'Vite', 'CSS3'],
-    github: 'https://github.com/BinadaPasandul/Portfolio',
+    github: 'https://github.com/Reshmi-Ruksala/Portfolio-Reshmi',
     image: '/images/portfolio1.jpeg'
   }
 ]

@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import binadaPic from '../assets/binada.jpeg'
+import binadaPic from '../assets/binada.png'
 </script>
 
 <style scoped>
