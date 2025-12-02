@@ -65,16 +65,31 @@ import Contact from './components/Contact.vue'
 </template>
 
 <style scoped>
+/* --- FOOTER STYLES (CHARCOAL & CRIMSON) --- */
+
+/* Color variables for clarity */
 .app {
+  --color-primary: #92140C; /* Deep Crimson Accent */
+  --color-text-light: #FFF8F0; /* Off-White/Cream Text */
+  --color-bg-deep: #1E1E24; /* Deep Charcoal Background */
+  --color-bg-dark: #2A2A35; /* Slightly lighter charcoal for contrast/gradients */
+  --color-text-muted: #b3a093; /* Muted brown-gray for subtle text */
   position: relative;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .footer {
-  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  /* Updated Background and Gradient */
+  background: linear-gradient(135deg, var(--color-bg-deep) 0%, var(--color-bg-dark) 50%, var(--color-bg-deep) 100%);
   padding: 3rem 2rem 1.5rem;
-  color: #e0e0e0;
-  border-top: 1px solid rgba(102, 126, 234, 0.3);
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  color: var(--color-text-light); /* Off-White Text */
+  /* Updated Border Color */
+  border-top: 1px solid rgba(146, 20, 12, 0.4); 
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .footer-content {
@@ -87,13 +102,15 @@ import Contact from './components/Contact.vue'
 }
 
 .footer-section h3 {
-  color: #667eea;
+  /* Updated Main Title Color */
+  color: var(--color-primary); 
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
 
 .footer-section h4 {
-  color: #b0b0b0;
+  /* Updated Secondary Heading Color (Muted) */
+  color: var(--color-text-muted); 
   margin-bottom: 1rem;
   font-size: 1.1rem;
   position: relative;
@@ -107,7 +124,8 @@ import Contact from './components/Contact.vue'
   bottom: 0;
   width: 40px;
   height: 2px;
-  background: #667eea;
+  /* Updated Accent Line Color */
+  background: var(--color-primary); 
 }
 
 .footer-section p {
@@ -125,7 +143,7 @@ import Contact from './components/Contact.vue'
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  color: #e0e0e0;
+  color: var(--color-text-light);
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 0.5rem 0.8rem;
@@ -133,8 +151,9 @@ import Contact from './components/Contact.vue'
 }
 
 .social-link:hover {
-  color: #667eea;
-  background: rgba(102, 126, 234, 0.1);
+  /* Updated Social Link Hover Color and Background */
+  color: var(--color-primary); 
+  background: rgba(146, 20, 12, 0.1); 
   transform: translateX(5px);
 }
 
@@ -149,14 +168,15 @@ import Contact from './components/Contact.vue'
 }
 
 .quick-links a {
-  color: #e0e0e0;
+  color: var(--color-text-light);
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 0.3rem 0;
 }
 
 .quick-links a:hover {
-  color: #667eea;
+  /* Updated Quick Link Hover Color */
+  color: var(--color-primary); 
   transform: translateX(5px);
 }
 
@@ -164,9 +184,11 @@ import Contact from './components/Contact.vue'
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(102, 126, 234, 0.2);
+  /* Updated Border Color */
+  border-top: 1px solid rgba(146, 20, 12, 0.2); 
   text-align: center;
-  color: #b0b0b0;
+  /* Updated Copyright Text Color */
+  color: var(--color-text-muted); 
 }
 
 .footer-bottom p {

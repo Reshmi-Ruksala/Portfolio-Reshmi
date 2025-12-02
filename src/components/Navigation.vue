@@ -174,7 +174,7 @@ onUnmounted(() => {
   gap: 0.75rem;
   font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #fff 0%, #667eea 100%);
+  background: linear-gradient(135deg, #fff 0%,rgba(146, 20, 12, 0.3) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -192,7 +192,7 @@ onUnmounted(() => {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #92140C 0%, #6E100A 100%);
   transition: width 0.3s ease;
   border-radius: 2px;
 }
@@ -213,7 +213,7 @@ onUnmounted(() => {
 .logo-dot {
   width: 8px;
   height: 8px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #92140C 0%, #6E100A 100%);
   border-radius: 50%;
   position: absolute;
   animation: pulse 2s infinite;
@@ -222,7 +222,7 @@ onUnmounted(() => {
 .logo-line {
   width: 20px;
   height: 2px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #92140C 0%, #6E100A 100%);
   border-radius: 1px;
   transform: rotate(45deg);
   animation: rotate 8s linear infinite;
@@ -267,7 +267,7 @@ onUnmounted(() => {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #92140C 0%, #6E100A 100%);
   transition: width 0.3s ease;
   border-radius: 2px;
 }
@@ -292,15 +292,15 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #92140C 0%, #6E100A 100%);
+  color: #FFF8F0;
   text-decoration: none;
   padding: 0.7rem 1.5rem;
   border-radius: 8px;
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 15px rgba(146, 20, 12, 0.35);
   position: relative;
   overflow: hidden;
   border: none;
@@ -325,7 +325,7 @@ onUnmounted(() => {
 
 .resume-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+  box-shadow: 0 6px 20px rgba(146, 20, 12, 0.5);
 }
 
 .hamburger {
@@ -341,7 +341,7 @@ onUnmounted(() => {
 }
 
 .hamburger:hover {
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(146, 20, 12, 0.1);
 }
 
 .hamburger span {
@@ -354,7 +354,7 @@ onUnmounted(() => {
 
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
-  background: #667eea;
+  background: #92140C;
 }
 
 .hamburger.active span:nth-child(2) {
@@ -363,7 +363,7 @@ onUnmounted(() => {
 
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
-  background: #667eea;
+  background: #92140C;
 }
 
 /* Animated background elements */
@@ -381,7 +381,7 @@ onUnmounted(() => {
 .bg-shape {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(146, 20, 12, 0.15) 0%, transparent 70%);
   animation: float 6s ease-in-out infinite;
 }
 

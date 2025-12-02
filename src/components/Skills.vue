@@ -81,8 +81,11 @@ const skills = [
 <style scoped>
 .skills {
   padding: 100px 2rem;
-  background: #1a1a2e;
+  background: linear-gradient(135deg, #1E1E24 0%, #2A2A35 45%, #353540 100%);
   min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .container {
@@ -92,7 +95,7 @@ const skills = [
 
 .section-title {
   font-size: 2.5rem;
-  color: #fff;
+  color: #FFF8F0;
   margin-bottom: 3rem;
   display: flex;
   align-items: center;
@@ -101,7 +104,7 @@ const skills = [
 }
 
 .title-number {
-  color: #667eea;
+  color: #92140C;
   font-family: 'Courier New', monospace;
   font-size: 1.5rem;
 }
@@ -113,8 +116,8 @@ const skills = [
 }
 
 .skill-card {
-  background: rgba(102, 126, 234, 0.1);
-  border: 2px solid rgba(102, 126, 234, 0.3);
+  background: rgba(146, 20, 12, 0.08);
+  border: 2px solid rgba(146, 20, 12, 0.3);
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
@@ -124,16 +127,16 @@ const skills = [
 
 .skill-card:hover {
   transform: translateY(-10px);
-  border-color: #667eea;
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-  background: rgba(102, 126, 234, 0.2);
+  border-color: #92140C;
+  box-shadow: 0 10px 30px rgba(146, 20, 12, 0.35);
+  background: rgba(146, 20, 12, 0.15);
 }
 
 .skill-icon {
   width: 80px;
   height: 80px;
   margin: 0 auto 1rem;
-  color: #667eea;
+  color: #92140C;
   transition: transform 0.3s ease;
 }
 
@@ -148,7 +151,7 @@ const skills = [
 
 .skill-name {
   font-size: 1.5rem;
-  color: #fff;
+  color: #FFF8F0;
   margin: 1rem 0 0.5rem;
   font-weight: 600;
 }

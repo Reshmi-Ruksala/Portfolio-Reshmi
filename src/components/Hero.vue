@@ -1,6 +1,5 @@
 <template>
   <section id="home" class="hero">
-    <!-- Animated background elements -->
     <div class="hero-background">
       <div class="floating-shape shape-1"></div>
       <div class="floating-shape shape-2"></div>
@@ -11,35 +10,30 @@
 
     <div class="hero-content">
       <div class="hero-text">
-        <!-- Animated greeting -->
         <div class="greeting-container">
           <p class="greeting">Hello, I'm</p>
           <div class="greeting-underline"></div>
         </div>
 
-        <!-- Animated name -->
         <h1 class="name">
           <span class="name-line">Reshmi</span>
           <span class="name-line last-name">Ruksala</span>
         </h1>
 
-        <!-- Animated title with typing effect -->
         <div class="title-container">
           <p class="title">Full Stack Developer</p>
           <div class="title-cursor"></div>
         </div>
 
-        <!-- Enhanced description -->
         <div class="description-container">
           <p class="description">
             full-stack developer with a strong focus 
-          on backend engineering and building scalable, high-performance systems. 
-          With experience completing 6+ full-stack projects and working with international clients, I specialize in 
-          crafting modern web applications, cloud-powered solutions, and clean user experiences using modern technologies
+            on backend engineering and building scalable, high-performance systems. 
+            With experience completing 6+ full-stack projects and working with international clients, I specialize in 
+            crafting modern web applications, cloud-powered solutions, and clean user experiences using modern technologies
           </p>
         </div>
 
-        <!-- Enhanced buttons with icons -->
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary" @click.prevent="handleNavClick('#projects')">
             <span>View My Work</span>
@@ -58,13 +52,11 @@
       </div>
 
       <div class="hero-image">
-        <!-- Enhanced image container with multiple animations -->
         <div class="image-container">
           <div class="image-placeholder">
             <img :src="binadaPic" alt="Binada Pasandul" class="profile-image" />
           </div>
           
-          <!-- Floating tech badges -->
           <div class="tech-badge badge-1">
             <span>.NET</span>
           </div>
@@ -78,17 +70,8 @@
             <span>MERN</span>
           </div>
           
-          <!-- Glow effect -->
           <div class="image-glow"></div>
         </div>
-      </div>
-    </div>
-
-    <!-- Enhanced scroll indicator -->
-    <div class="scroll-indicator" @click="handleNavClick('#about')">
-      <div class="scroll-text">Scroll to explore</div>
-      <div class="scroll-arrow">
-        <span></span>
       </div>
     </div>
   </section>
@@ -113,23 +96,33 @@ const handleNavClick = (sectionId: string) => {
 </script>
 
 <style scoped>
+/* --- COLOR-SWAPPED STYLES (CHARCOAL, CRIMSON, OFF-WHITE) --- */
 .hero {
-  --accent-light: #f5f5f5;
-  --accent-mid: #cfcfcf;
-  --accent-dark: #9a9a9a;
-  --bg-deep: #050505;
-  --bg-dark: #101010;
-  --bg-overlay: rgba(255, 255, 255, 0.06);
-  --text-muted: #bdbdbd;
-  --text-soft: #dcdcdc;
+  /* New Color Variables */
+  --color-primary: #92140C; /* Deep Crimson Accent */
+  --color-text-light: #FFF8F0; /* Off-White/Cream Text */
+  --color-bg-deep: #1E1E24; /* Deep Charcoal Background */
+  --color-bg-dark: #2A2A35; /* Slightly lighter charcoal for contrast/gradients */
+  
+  --accent-light: var(--color-text-light);
+  --accent-mid: var(--color-primary);
+  --accent-dark: #6E100A; /* Darker Crimson */
+  --bg-deep: var(--color-bg-deep);
+  --bg-dark: var(--color-bg-dark);
+  --bg-overlay: rgba(146, 20, 12, 0.1); /* Crimson overlay */
+  --text-muted: #b3a093; /* Muted brown-gray for subtle text */
+  --text-soft: var(--color-text-light); /* Off-white for body text */
+
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 2rem 2rem;
-  background: linear-gradient(135deg, #030303 0%, #0a0a0a 45%, #111111 100%);
+  padding: 120px 0 2rem;
+  /* Applying the new background gradient */
+  background: linear-gradient(135deg, var(--bg-deep) 0%, var(--bg-dark) 45%, #353540 100%);
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Enhanced background with animations */
@@ -145,7 +138,8 @@ const handleNavClick = (sectionId: string) => {
 .floating-shape {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  /* Using Crimson accent for the floating elements */
+  background: radial-gradient(circle, rgba(146, 20, 12, 0.15) 0%, transparent 70%);
   animation: float 8s ease-in-out infinite;
 }
 
@@ -188,8 +182,9 @@ const handleNavClick = (sectionId: string) => {
   right: 0;
   bottom: 0;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    /* Using Crimson accent in the grid lines */
+    linear-gradient(rgba(146, 20, 12, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(146, 20, 12, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: gridMove 20s linear infinite;
 }
@@ -197,12 +192,15 @@ const handleNavClick = (sectionId: string) => {
 .hero-content {
   max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 4rem;
   align-items: center;
   z-index: 1;
   position: relative;
+  box-sizing: border-box;
 }
 
 /* Enhanced text animations */
@@ -218,7 +216,7 @@ const handleNavClick = (sectionId: string) => {
 
 .greeting {
   font-size: 1.3rem;
-  color: var(--accent-mid);
+  color: var(--accent-mid); /* Crimson */
   margin-bottom: 0.5rem;
   font-weight: 500;
   animation: fadeInUp 0.8s ease 0.2s both;
@@ -230,6 +228,7 @@ const handleNavClick = (sectionId: string) => {
   left: 0;
   width: 0;
   height: 2px;
+  /* Using Crimson gradient */
   background: linear-gradient(135deg, var(--accent-mid) 0%, var(--accent-dark) 100%);
   animation: expandWidth 1s ease 0.5s forwards;
 }
@@ -237,14 +236,15 @@ const handleNavClick = (sectionId: string) => {
 .name {
   font-size: 4.5rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--color-text-light); /* Off-White */
   margin: 0.5rem 0;
   line-height: 1.1;
 }
 
 .name-line {
   display: block;
-  background: linear-gradient(135deg, #ffffff 0%, #dcdcdc 50%, #a0a0a0 100%);
+  /* Name gradient using Off-White and Crimson */
+  background: linear-gradient(135deg, var(--color-text-light) 0%, var(--text-soft) 50%, var(--accent-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -265,7 +265,7 @@ const handleNavClick = (sectionId: string) => {
 
 .title {
   font-size: 1.6rem;
-  color: var(--text-muted);
+  color: var(--text-muted); /* Muted brown-gray */
   margin: 0;
   font-weight: 500;
 }
@@ -273,7 +273,7 @@ const handleNavClick = (sectionId: string) => {
 .title-cursor {
   width: 3px;
   height: 1.6rem;
-  background: var(--accent-mid);
+  background: var(--accent-mid); /* Crimson */
   animation: blink 1s infinite;
 }
 
@@ -283,7 +283,7 @@ const handleNavClick = (sectionId: string) => {
 
 .description {
   font-size: 1.15rem;
-  color: var(--text-soft);
+  color: var(--text-soft); /* Off-White */
   line-height: 1.8;
   margin: 1.5rem 0 2rem;
   max-width: 500px;
@@ -302,6 +302,7 @@ const handleNavClick = (sectionId: string) => {
   left: 0;
   width: 100%;
   height: 2px;
+  /* Crimson gradient */
   background: linear-gradient(135deg, var(--accent-mid) 0%, var(--accent-dark) 100%);
   border-radius: 1px;
 }
@@ -326,7 +327,8 @@ const handleNavClick = (sectionId: string) => {
   gap: 0.75rem;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  /* Using Crimson accent for button border on primary button */
+  border: 1px solid rgba(146, 20, 12, 0.3);
 }
 
 .btn::before {
@@ -336,7 +338,7 @@ const handleNavClick = (sectionId: string) => {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 248, 240, 0.1), transparent); /* Off-White shimmer */
   transition: left 0.5s ease;
 }
 
@@ -345,25 +347,27 @@ const handleNavClick = (sectionId: string) => {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #f2f2f2 0%, #c8c8c8 100%);
-  color: #050505;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  /* Primary Button: Solid Crimson Fill */
+  background: linear-gradient(135deg, var(--accent-mid) 0%, var(--accent-dark) 100%);
+  color: var(--color-text-light); /* Off-White text */
+  box-shadow: 0 8px 25px rgba(146, 20, 12, 0.35);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 12px 35px rgba(146, 20, 12, 0.5);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.04);
-  color: #f5f5f5;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Secondary Button: Subtle background with Off-White text */
+  background: rgba(146, 20, 12, 0.04);
+  color: var(--color-text-light);
+  border: 1px solid rgba(146, 20, 12, 0.3);
   backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(146, 20, 12, 0.12);
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
@@ -385,7 +389,8 @@ const handleNavClick = (sectionId: string) => {
   height: 420px;
   border-radius: 50%;
   position: relative;
-  background: linear-gradient(135deg, #1b1b1b 0%, #2e2e2e 100%);
+  /* Image placeholder background using charcoal colors */
+  background: linear-gradient(135deg, var(--color-bg-deep) 0%, var(--color-bg-dark) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -401,7 +406,8 @@ const handleNavClick = (sectionId: string) => {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.2);
+  /* Image border with slight crimson accent */
+  border: 4px solid rgba(146, 20, 12, 0.4);
   transition: all 0.3s ease;
 }
 
@@ -417,7 +423,8 @@ const handleNavClick = (sectionId: string) => {
   width: 450px;
   height: 450px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, transparent 70%);
+  /* Image glow using Crimson accent */
+  background: radial-gradient(circle, rgba(146, 20, 12, 0.3) 0%, transparent 70%);
   animation: pulseGlow 4s ease-in-out infinite;
   z-index: 1;
 }
@@ -425,14 +432,15 @@ const handleNavClick = (sectionId: string) => {
 /* Tech badges */
 .tech-badge {
   position: absolute;
-  background: rgba(255, 255, 255, 0.08);
+  /* Tech badge colors using crimson accent and dark background */
+  background: rgba(146, 20, 12, 0.08);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(146, 20, 12, 0.3);
   border-radius: 20px;
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #f5f5f5;
+  color: var(--color-text-light);
   animation: float 4s ease-in-out infinite;
   z-index: 3;
 }
@@ -461,85 +469,24 @@ const handleNavClick = (sectionId: string) => {
   animation-delay: 3s;
 }
 
-/* Enhanced scroll indicator */
-.scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: bounce 2s infinite;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.scroll-text {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.scroll-arrow {
-  width: 30px;
-  height: 50px;
-  border: 2px solid var(--text-muted);
-  border-radius: 25px;
-  position: relative;
-}
-
-.scroll-arrow span {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
-  background: var(--text-muted);
-  border-radius: 50%;
-  animation: scroll 2s infinite;
-}
-
 /* Animations */
 @keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes expandWidth {
-  to {
-    width: 100%;
-  }
+  to { width: 100%; }
 }
 
 @keyframes blink {
@@ -557,12 +504,8 @@ const handleNavClick = (sectionId: string) => {
 }
 
 @keyframes gridMove {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(50px, 50px);
-  }
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
 }
 
 @keyframes pulseGlow {
@@ -573,26 +516,6 @@ const handleNavClick = (sectionId: string) => {
   50% {
     opacity: 0.8;
     transform: translate(-50%, -50%) scale(1.1);
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-}
-
-@keyframes scroll {
-  0% {
-    opacity: 1;
-    top: 10px;
-  }
-  100% {
-    opacity: 0;
-    top: 30px;
   }
 }
 
@@ -626,7 +549,6 @@ const handleNavClick = (sectionId: string) => {
   .tech-badge {
     display: none;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -643,6 +565,5 @@ const handleNavClick = (sectionId: string) => {
     padding: 1rem 1.8rem;
     font-size: 0.9rem;
   }
-
 }
 </style>

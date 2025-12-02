@@ -130,8 +130,11 @@ const projects: Project[] = [
 <style scoped>
 .projects {
   padding: 100px 2rem;
-  background: #0f0c29;
+  background: linear-gradient(135deg, #1E1E24 0%, #2A2A35 45%, #353540 100%);
   min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .container {
@@ -141,7 +144,7 @@ const projects: Project[] = [
 
 .section-title {
   font-size: 2.5rem;
-  color: #fff;
+  color: #FFF8F0;
   margin-bottom: 3rem;
   display: flex;
   align-items: center;
@@ -150,7 +153,7 @@ const projects: Project[] = [
 }
 
 .title-number {
-  color: #667eea;
+  color: #92140C;
   font-family: 'Courier New', monospace;
   font-size: 1.5rem;
 }
@@ -162,17 +165,17 @@ const projects: Project[] = [
 }
 
 .project-card {
-  background: #1a1a2e;
+  background: #2A2A35;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(146, 20, 12, 0.2);
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-  border-color: #667eea;
+  box-shadow: 0 20px 40px rgba(146, 20, 12, 0.35);
+  border-color: #92140C;
 }
 
 .project-image {
@@ -180,7 +183,7 @@ const projects: Project[] = [
   width: 100%;
   height: 250px;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #92140C 0%, #6E100A 100%);
 }
 
 .image-placeholder {
@@ -189,7 +192,7 @@ const projects: Project[] = [
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 248, 240, 0.8);
   font-size: 1.2rem;
   background: rgba(0, 0, 0, 0.3);
 }
@@ -214,19 +217,19 @@ const projects: Project[] = [
 }
 
 .project-link {
-  color: #fff;
+  color: #FFF8F0;
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(102, 126, 234, 0.3);
+  background: rgba(146, 20, 12, 0.3);
   transition: all 0.3s ease;
 }
 
 .project-link:hover {
-  background: #667eea;
+  background: #92140C;
   transform: scale(1.1);
 }
 
@@ -241,13 +244,13 @@ const projects: Project[] = [
 
 .project-title {
   font-size: 1.5rem;
-  color: #fff;
+  color: #FFF8F0;
   margin: 0 0 1rem;
   font-weight: 600;
 }
 
 .project-description {
-  color: #b0b0b0;
+  color: #b3a093;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
@@ -261,8 +264,8 @@ const projects: Project[] = [
 
 .tech-tag {
   padding: 0.3rem 0.8rem;
-  background: rgba(102, 126, 234, 0.2);
-  color: #667eea;
+  background: rgba(146, 20, 12, 0.2);
+  color: #92140C;
   border-radius: 4px;
   font-size: 0.85rem;
   font-weight: 500;

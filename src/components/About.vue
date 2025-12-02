@@ -53,10 +53,13 @@ import binadaPic from '../assets/binada.png'
 <style scoped>
 .about {
   padding: 100px 2rem;
-  background: #0f0c29;
+  background: linear-gradient(135deg, #1E1E24 0%, #2A2A35 45%, #353540 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .container {
@@ -67,7 +70,7 @@ import binadaPic from '../assets/binada.png'
 
 .section-title {
   font-size: 2.5rem;
-  color: #fff;
+  color: #FFF8F0;
   margin-bottom: 3rem;
   display: flex;
   align-items: center;
@@ -76,7 +79,7 @@ import binadaPic from '../assets/binada.png'
 }
 
 .title-number {
-  color: #667eea;
+  color: #92140C;
   font-family: 'Courier New', monospace;
   font-size: 1.5rem;
 }
@@ -89,7 +92,7 @@ import binadaPic from '../assets/binada.png'
 }
 
 .about-text {
-  color: #d0d0d0;
+  color: #FFF8F0;
   line-height: 1.8;
   font-size: 1.1rem;
 }
@@ -110,14 +113,14 @@ import binadaPic from '../assets/binada.png'
 .tech-list li {
   position: relative;
   padding-left: 1.5rem;
-  color: #b0b0b0;
+  color: #b3a093;
 }
 
 .tech-list li::before {
   content: '▹';
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: #92140C;
 }
 
 .about-image {
@@ -138,20 +141,21 @@ import binadaPic from '../assets/binada.png'
   left: 20px;
   width: 100%;
   height: 100%;
-  border: 2px solid #667eea;
+  border: 2px solid rgba(146, 20, 12, 0.4);
   border-radius: 4px;
   transition: transform 0.3s ease;
 }
 
 .image-wrapper:hover .image-border {
   transform: translate(-10px, -10px);
+  border-color: #92140C;
 }
 
 .image-content {
   position: relative;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: linear-gradient(135deg, #1E1E24 0%, #2A2A35 100%);
   border-radius: 4px;
   overflow: hidden;
   z-index: 1;
@@ -170,9 +174,9 @@ import binadaPic from '../assets/binada.png'
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #667eea;
+  color: #92140C;
   font-size: 1.2rem;
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(146, 20, 12, 0.1);
 }
 
 @media (max-width: 968px) {
