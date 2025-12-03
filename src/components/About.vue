@@ -66,12 +66,12 @@
               </div>
           </div>
       </div>
-      </div>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import binadaPic from '../assets/binada.png'
+import binadaPic from '../assets/binada.jpeg'
 </script>
 
 <style scoped>
@@ -84,6 +84,11 @@ import binadaPic from '../assets/binada.png'
   --accent-mid: var(--color-primary);
   --text-muted: #b3a093; /* Muted brown-gray */
   --card-glow: rgba(146, 20, 12, 0.4); /* Glow effect color */
+  
+  /* NEW Image Variables for control */
+  --image-size-lg: 300px; 
+  --image-size-md: 250px; 
+  --image-border-thickness: 3px;
 
   padding: 120px 2rem;
   background: var(--color-bg-deep);
@@ -109,7 +114,7 @@ import binadaPic from '../assets/binada.png'
   margin: 0 auto;
 }
 
-/* Section Header */
+/* Section Header (Unchanged) */
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
@@ -159,7 +164,7 @@ import binadaPic from '../assets/binada.png'
   line-height: 1.6;
 }
 
-/* About Content */
+/* About Content (Unchanged Grid) */
 .about-content {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -183,38 +188,53 @@ import binadaPic from '../assets/binada.png'
   margin-bottom: 0;
 }
 
-/* Image Section */
+/* --- MODIFIED IMAGE SECTION STYLES --- */
 .about-image {
   display: flex;
   justify-content: center;
   align-items: center;
   animation: fadeInRight 0.8s ease;
+  height: 100%;
 }
 
 .image-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
+  width: var(--image-size-lg);
+  height: var(--image-size-lg); /* Fixed size for circular crop */
+  border-radius: 50%; /* Circular Crop */
   overflow: hidden;
-  border: 2px solid rgba(146, 20, 12, 0.2);
-  transition: all 0.4s ease;
+  
+  /* Stylish Border and Initial Glow */
+  border: var(--image-border-thickness) solid var(--color-bg-dark); 
+  box-shadow: 0 0 0 var(--image-border-thickness) rgba(146, 20, 12, 0.3); /* Subtle Accent Outline */
+  
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
 }
 
+/* Beautiful Animation on Hover */
 .image-wrapper:hover {
-  border-color: rgba(146, 20, 12, 0.4);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(146, 20, 12, 0.2);
+  transform: scale(1.05) rotate(3deg); /* Scale and slight rotation */
+  border-color: var(--accent-mid); /* Solid border color change */
+  /* Expanding subtle glow effect */
+  box-shadow: 0 0 0 10px rgba(146, 20, 12, 0.1), 
+              0 0 0 20px rgba(146, 20, 12, 0.05); 
 }
 
 .about-profile-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: cover; /* Ensures image fills the container without stretching (cropping) */
+  object-position: center top; /* Keeps the focus on the face/top of the image */
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* --- NEW: Redesigned Education Section Styles (Timeline/Block Style) --- */
+.image-wrapper:hover .about-profile-image {
+  transform: scale(1.02); /* Very slight zoom on the image inside the wrapper */
+}
+
+/* --- Education Section Styles (Unchanged) --- */
 .education-section {
     animation: fadeInUp 0.8s ease 0.2s both; 
     padding-top: 2rem;
@@ -275,7 +295,7 @@ import binadaPic from '../assets/binada.png'
     width: 50px;
     height: 50px;
     background-color: var(--accent-mid);
-    border: 3px solid var(--color-bg-deep); /* Border to stand out on the line */
+    border: 3px solid var(--color-bg-deep);
     border-radius: 50%;
     position: absolute;
     top: 15px;
@@ -422,6 +442,12 @@ import binadaPic from '../assets/binada.png'
   .about-image {
     order: -1;
   }
+  
+  .image-wrapper {
+    width: var(--image-size-md);
+    height: var(--image-size-md);
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -431,6 +457,12 @@ import binadaPic from '../assets/binada.png'
 
   .section-header {
     margin-bottom: 3rem;
+  }
+  
+  /* Image size on small screens */
+  .image-wrapper {
+    --image-size-lg: 200px;
+    --image-size-md: 200px;
   }
 
   /* Timeline Responsive Adjustments */

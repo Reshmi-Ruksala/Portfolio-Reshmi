@@ -104,7 +104,7 @@ const projects: Project[] = [
     title: 'Snazzy-The Smart Shoe Store',
     description: 'A full-stack e-commerce application with user authentication, Live chat system, stripe payment integration and admin dashboards.MERN stack',
     technologies: ['React.js', 'Node.js', 'MongoDB', 'Express'],
-    github: 'https://github.com/BinadaPasandul/snazzy/tree/new',
+    github: 'https://github.com/Reshmi-Ruksala/snazzy',
     image: '/images/snazzy2.jpeg'
   },
   {

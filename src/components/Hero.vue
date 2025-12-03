@@ -74,7 +74,7 @@
 </template>
 
 <script setup lang="ts">
-import binadaPic from '../assets/binada.png'
+import binadaPic from '../assets/binada.jpeg'
 
 const handleNavClick = (sectionId: string) => {
   const element = document.querySelector(sectionId)
