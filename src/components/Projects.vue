@@ -105,7 +105,7 @@ const projects: Project[] = [
     description: 'A full-stack e-commerce application with user authentication, Live chat system, stripe payment integration and admin dashboards.MERN stack',
     technologies: ['React.js', 'Node.js', 'MongoDB', 'Express'],
     github: 'https://github.com/Reshmi-Ruksala/snazzy',
-    image: '/images/snazzy2.jpeg'
+    image: '/images/snazzy2.jpg'
   },
   {
     id: 2,
@@ -113,7 +113,7 @@ const projects: Project[] = [
     description: 'A full-stack auction system where sellers can set bids for their items and buyers can buy them and can be delivered.',
     technologies: ['Java', 'JSP/Servlet', 'SQL', 'tomcat'],
     github: 'https://github.com/BinadaPasandul/Bidify',
-    image: '/images/bidify.jpeg'
+    image: '/images/bidify.jpg'
   },
   {
     id: 3,
@@ -121,7 +121,7 @@ const projects: Project[] = [
     description: 'A A wellness tracking app with daily habit tracking, water intake monitoring, and mood logging. Built using Kotlin with SharedPreferences for smooth and persistent user data storage.',
     technologies: ['Kotlin', 'Shared preferences','Figma'],
     github: 'https://github.com/Reshmi-Ruksala/BeWell-',
-    image: '/images/pulse1.jpeg'
+    image: '/images/pulse1.jpg'
   },
   {
     id: 4,
@@ -129,7 +129,7 @@ const projects: Project[] = [
     description: 'A Mobile App Developer Developed a mobile app for browsing, booking, and managing home services with an intuitive UI and smooth user experience. ',
     technologies: ['Kotlin','Share preferences', 'Figma'],
     github: 'https://github.com/Reshmi-Ruksala/HomeFix-MAD',
-    image: '/images/travella1.jpeg'
+    image: '/images/travella1.jpg'
   },
   {
     id: 5,
@@ -137,7 +137,7 @@ const projects: Project[] = [
     description: 'A hotel reservation system for weddings using, Implemented user booking, hotel listing and admin management features',
     technologies: ['html', 'css', 'js', 'php'],
     github: 'https://github.com',
-    image: '/images/wedin.jpeg'
+    image: '/images/wedin.jpg'
   },
   {
     id: 6,
@@ -146,6 +146,14 @@ const projects: Project[] = [
     technologies: ['Vue.js', 'TypeScript', 'Vite', 'CSS3'],
     github: 'https://github.com/Reshmi-Ruksala/Portfolio-Reshmi',
     image: '/images/portfolio1.jpeg'
+  },
+  {
+    id: 7,
+    title: 'Library Management System',
+    description: 'A sleek, full-stack library management system with a responsive dashboard, real-time CRUD operations, and a smooth React + .NET API integration.',
+    technologies: ['React','TypeScript','Vite','Axios','Tailwind CSS','ASP.NET Core Web API','C#','Entity Framework Core'],
+    github: 'https://github.com/Reshmi-Ruksala/Library-Management-System',
+    image: '/images/library.jpg'
   }
 ]
 </script>

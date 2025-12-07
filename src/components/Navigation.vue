@@ -111,7 +111,7 @@ const downloadResume = () => {
   // Create a temporary anchor element
   const link = document.createElement('a')
   link.href = '/resume.pdf'
-  link.download = 'Binada_Pasandul_Resume.pdf' // This will be the downloaded file name
+  link.download = 'Reshmi_Ruksala_Resume.pdf' // This will be the downloaded file name
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
