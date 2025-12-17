@@ -152,7 +152,7 @@ const projects: Project[] = [
     title: 'Library Management System',
     description: 'A sleek, full-stack library management system with a responsive dashboard, real-time CRUD operations, and a smooth React + .NET API integration.',
     technologies: ['React','TypeScript','Vite','Axios','Tailwind CSS','ASP.NET Core Web API','C#','Entity Framework Core'],
-    github: 'https://github.com/Reshmi-Ruksala/Library-Management-System',
+    github: 'https://github.com/Reshmi-Ruksala/Library-Managment',
     image: '/images/library.jpg'
   }
 ]
