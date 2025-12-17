@@ -163,7 +163,7 @@ const handleSubmit = async () => {
   submitStatus.value = null
 
   try {
-    const response = await fetch('https://formspree.io/f/xgvjkqod', {
+    const response = await fetch('https://formspree.io/f/xzznnjan', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
